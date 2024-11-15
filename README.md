@@ -3,7 +3,7 @@ To download the App, you must open the Terminal and enter the following:
 ```
 curl -L https://github.com/CornellCAC/CIS-DEIB/releases/download/Release/main.zip --output ~/Desktop/main.zip
 ```
-A file called `main.zip` will appear on your desktop. Double-click to unzip; you should see `main.app` on your desktop.
+A file called `main.zip` will appear on your desktop. Double-click to unzip; you should see `main` on your desktop.
 
 
 # Terminology

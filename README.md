@@ -20,9 +20,11 @@ A file called `main.zip` will appear on your desktop. Double-click to unzip; you
 
 
 # Extra Notes
-1. Only Citizens are tracked and counted. 
+1. The Excel sheet must have `Netid`, `Gender`, `Ethnic CU`, `Class/Level`, and either `Academic Plan` or `Major` (not both) in each worksheet.
 
 1. Worksheets should be ordered in chronological order. 
+
+1. If there is a 'US Citizen' column, Only students with 'Citizen' are tracked and counted.
 
 1. Students should have consistent NetIDs between semesters.
 
@@ -33,21 +35,24 @@ A file called `main.zip` will appear on your desktop. Double-click to unzip; you
 This App was built with Python 3.13.0 and pip 24.2, but older versions of Python should also work.
 
 ## Install Packages
-With Python installed, type the following in the Terminal, 
+### MacOS/Windows
+With Python installed, type the following in the a terminal, 
 ```
 pip install -r requirements.txt
 ```
+Windows should may substitute `pip` with `py3 -m pip` if needed.
 
 ## Build the Application
-In the Terminal, type the following
+### MacOS/Windows
+Type the following
 ```
-chmod 700 build.sh clean.sh
+pyinstaller --clean --noconfirm --onefile --windowed main.py
+```
+The app will be in the `dist` folder. 
+### MacOS: Distributing the app
+If you want to share the app, you must codesign the application. An example is shown in `build.sh`. You may change the signature with your own, and do:
+```
+chmod 700 build.sh
 ./build.sh
 ```
 A main.zip will appear in the current directory, which contains the App.
-
-## Clean Build
-To clean the directory, enter 
-```
-./clean.sh
-```
